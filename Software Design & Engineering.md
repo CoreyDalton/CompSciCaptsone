@@ -1,6 +1,6 @@
 # CompSciCaptsone
 
-## C++ Code Grading Program
+## C++ Grading Program
  
 ```
 #include<iostream>
