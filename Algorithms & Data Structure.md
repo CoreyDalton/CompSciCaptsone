@@ -3,11 +3,19 @@
 3D Shapes C++
 
 ```
+/*
+ *3D Objects.cpp
+ *
+ *  Created on: Dec 6, 2020
+ *      Author: Corey Dalton
+ */
+
+
 #include <windows.h>  // for MS Windows
 #include <GL/glut.h>  // GLUT, include glu.h and gl.h
 
 /* Global variables */
-char title[] = "3D Shapes";
+char title[] = "3D Objects";
 
 /* Initialize OpenGL Graphics */
 void initGL() {
@@ -16,7 +24,7 @@ void initGL() {
    glEnable(GL_DEPTH_TEST);   // Enable depth testing for z-culling
    glDepthFunc(GL_LEQUAL);    // Set the type of depth-test
    glShadeModel(GL_SMOOTH);   // Enable smooth shading
-   glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Nice perspective corrections
+   glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);  // Perspective corrections
 }
 
 /* Handler for window-repaint event. Called back when the window first appears and
@@ -30,56 +38,56 @@ void display() {
    glTranslatef(1.5f, 0.0f, -7.0f);  // Move right and into the screen
 
    glBegin(GL_QUADS);                // Begin drawing the color cube with 6 quads
-      // Top face (y = 1.0f)
-      // Define vertices in counter-clockwise (CCW) order with normal pointing out
-      glColor3f(0.0f, 1.0f, 0.0f);     // Green
-      glVertex3f( 1.0f, 1.0f, -1.0f);
-      glVertex3f(-1.0f, 1.0f, -1.0f);
-      glVertex3f(-1.0f, 1.0f,  1.0f);
-      glVertex3f( 1.0f, 1.0f,  1.0f);
-
-      // Bottom face (y = -1.0f)
-      glColor3f(1.0f, 0.5f, 0.0f);     // Orange
-      glVertex3f( 1.0f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f( 1.0f, -1.0f, -1.0f);
-
-      // Front face  (z = 1.0f)
+      // Define vertices in counter-clockwise order with normal pointing out
+   	  // Side 1
       glColor3f(1.0f, 0.0f, 0.0f);     // Red
       glVertex3f( 1.0f,  1.0f, 1.0f);
       glVertex3f(-1.0f,  1.0f, 1.0f);
       glVertex3f(-1.0f, -1.0f, 1.0f);
       glVertex3f( 1.0f, -1.0f, 1.0f);
 
-      // Back face (z = -1.0f)
-      glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
-      glVertex3f( 1.0f, -1.0f, -1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f(-1.0f,  1.0f, -1.0f);
-      glVertex3f( 1.0f,  1.0f, -1.0f);
-
-      // Left face (x = -1.0f)
+      // Side 2
       glColor3f(0.0f, 0.0f, 1.0f);     // Blue
       glVertex3f(-1.0f,  1.0f,  1.0f);
       glVertex3f(-1.0f,  1.0f, -1.0f);
       glVertex3f(-1.0f, -1.0f, -1.0f);
       glVertex3f(-1.0f, -1.0f,  1.0f);
 
-      // Right face (x = 1.0f)
+      //Side 3
+      glColor3f(0.0f, 1.0f, 0.0f);     // Green
+      glVertex3f( 1.0f, 1.0f, -1.0f);
+      glVertex3f(-1.0f, 1.0f, -1.0f);
+      glVertex3f(-1.0f, 1.0f,  1.0f);
+      glVertex3f( 1.0f, 1.0f,  1.0f);
+
+      // Side 4
+      glColor3f(1.0f, 0.5f, 0.0f);     // Orange
+      glVertex3f( 1.0f, -1.0f,  1.0f);
+      glVertex3f(-1.0f, -1.0f,  1.0f);
+      glVertex3f(-1.0f, -1.0f, -1.0f);
+      glVertex3f( 1.0f, -1.0f, -1.0f);
+
+      // Side 5
+      glColor3f(1.0f, 1.0f, 0.0f);     // Yellow
+      glVertex3f( 1.0f, -1.0f, -1.0f);
+      glVertex3f(-1.0f, -1.0f, -1.0f);
+      glVertex3f(-1.0f,  1.0f, -1.0f);
+      glVertex3f( 1.0f,  1.0f, -1.0f);
+
+      // Side 6
       glColor3f(1.0f, 0.0f, 1.0f);     // Magenta
       glVertex3f(1.0f,  1.0f, -1.0f);
       glVertex3f(1.0f,  1.0f,  1.0f);
       glVertex3f(1.0f, -1.0f,  1.0f);
       glVertex3f(1.0f, -1.0f, -1.0f);
-   glEnd();  // End of drawing color-cube
+   glEnd();  // Cube finished
 
    // Render a pyramid consists of 4 triangles
    glLoadIdentity();                  // Reset the model-view matrix
    glTranslatef(-1.5f, 0.0f, -6.0f);  // Move left and into the screen
 
    glBegin(GL_TRIANGLES);           // Begin drawing the pyramid with 4 triangles
-      // Front - Red face
+      // Triangle - Red
       glColor3f(1.0f, 0.0f, 0.0f);
       glVertex3f( 0.0f, 1.0f, 0.0f);
       glColor3f(1.0f, 0.0f, 0.0f);
@@ -87,7 +95,7 @@ void display() {
       glColor3f(1.0f, 0.0f, 0.0f);
       glVertex3f(1.0f, -1.0f, 1.0f);
 
-      // Right - Blue face
+      // Triangle 2 - Blue
       glColor3f(0.0f, 0.0f, 1.0f);
       glVertex3f(0.0f, 1.0f, 0.0f);
       glColor3f(0.0f, 0.0f, 1.0f);
@@ -95,7 +103,7 @@ void display() {
       glColor3f(0.0f, 0.0f, 1.0f);
       glVertex3f(1.0f, -1.0f, -1.0f);
 
-      // Back - Green face
+      // Triangle 3 - Green
       glColor3f(0.0f, 1.0f, 0.0f);
       glVertex3f(0.0f, 1.0f, 0.0f);
       glColor3f(0.0f, 1.0f, 0.0f);
@@ -103,14 +111,15 @@ void display() {
       glColor3f(0.0f, 1.0f, 0.0f);
       glVertex3f(-1.0f, -1.0f, -1.0f);
 
-      // Left - Orange face
+      // Triangle 4 - Orange
       glColor3f(1.0f, 0.5f, 0.0f);
       glVertex3f( 0.0f, 1.0f, 0.0f);
       glColor3f(1.0f, 0.5f, 0.0f);
       glVertex3f(-1.0f,-1.0f,-1.0f);
       glColor3f(1.0f, 0.5f, 0.0f);
       glVertex3f(-1.0f,-1.0f, 1.0f);
-   glEnd();   // Done drawing the pyramid
+
+   glEnd();   // Pyramid finished
 
    glutSwapBuffers();  // Swap the front and back frame buffers (double buffering)
 
@@ -146,4 +155,5 @@ int main(int argc, char** argv) {
    glutMainLoop();                 // Enter the infinite event-processing loop
    return 0;
 }
+
 ```
