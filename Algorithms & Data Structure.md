@@ -170,6 +170,8 @@ int main(int argc, char** argv) {
 }
 
 ```
+<center><img src="3DObjects.JPG"></center>
+
 ## Enahnced Rotating 3D Shapes C++
 
 ```
@@ -343,6 +345,7 @@ int main(int argc, char** argv) {
 }
 
 ```
+<center><img src="Rotating Objects.gif"></center>
 
 ### Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face?
 Throughout the process of enhancing this artifact, I learned how to code the objects to move on their own in a controlled manner. One of the biggest challenges that I faced was refreshing myself on how OpenGL worked since I hadn’t dealt with it since I was enrolled in the CS 330 course about 10 months ago. I also found it slightly challenging to create the rotation of the objects in a controlled manner, where all sides of both objects would be seen at some point and there would be no collision or overlapping between the objects. 
