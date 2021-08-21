@@ -81,6 +81,9 @@ int main()
 }
 
 ```
+C++ Program Run:
+<center><img src="GradingC++.JPG"></center>
+
 ## Enahnced Java Grading Program
 
 ```Java
@@ -133,6 +136,9 @@ public class JavaGrading
 }
 
 ```
+Java Program Run:
+<center><img src="GradingJava.JPG"></center>
+
 ### Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face?
 
 Throughout the process of transferring this C++ program into Java, I learned that, at least at a base level, the two languages are fairly similar and having a basic understanding of both proved to be very useful in the translation process. The biggest challenge that I faced was going back to coding in Java and remembering how the language works in comparison to C++. It had been some time since I had done any coding in Java, so it took a bit longer than it would have if I had been practicing in the language.
