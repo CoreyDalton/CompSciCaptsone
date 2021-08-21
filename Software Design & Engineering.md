@@ -14,7 +14,7 @@ The reason that I selected this item was because I felt it would be a good examp
 
 ## Original C++ Grading Program
  
-```
+```C++
 /*
  * Grading.cpp
  */
@@ -83,7 +83,7 @@ int main()
 ```
 ## Enahnced Java Grading Program
 
-```
+```Java
 import java.util.Scanner;
 
 public class JavaGrading
