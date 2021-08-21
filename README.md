@@ -1,6 +1,7 @@
 [Home](README.md) - [Code Review](CodeReview.md) - [Software Design & Engineering](SoftwareDesign&Engineering.md) - [Data Structures and Algorithms](Algorithms&DataStructures.md) - [Databases](Databases.md)
 
 # Corey Dalton SNHU CS 499 ePortfolio
+<center><img src="banner_eportfolio.jpg"></center>
 
 ## Self-Assessment
 
