@@ -240,6 +240,9 @@ INSERT INTO dependents(dependent_id,first_name,relationship,employee_id) VALUES 
 INSERT INTO dependents(dependent_id,first_name,relationship,employee_id) VALUES (30,'Sandra','Child',176);
 
 ```
+View Dependents table after initial data load:
+<center><img src="Dependents Original.JPG"></center>
+
 ## Enahncements for HR Database
 
 ```
@@ -304,6 +307,9 @@ INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_i
 /* Show all data including last names from dependents table */
 SELECT * FROM dependents
 ```
+View of Dependents table after dropping and re-creating with last_name field:
+<center><img src="Dependents Updated.JPG"></center>
+
 ### Reflect on the process of enhancing and/or modifying the artifact. What did you learn as you were creating it and improving it? What challenges did you face?
 
 Throughout the process of enhancing this artifact, I re-learned how to work with and manipulate tables and data in SQL, since it had been some time since I worked with SQL.  The biggest challenge that I faced was deciding what enhancement needed to be made and then figuring out how I could add it. There were a couple ways that I could have added the last name section to the dependents table, but I decided to go the route that I did so that I could practice with removing data and dropping tables, rather than just adding a last name column to the existing table.
