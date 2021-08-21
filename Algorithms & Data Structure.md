@@ -15,7 +15,7 @@ The reason that I selected this item was because I felt it would be a good examp
 
 ## Original 3D Shapes C++
 
-```
+```C++
 /*
  *3D Objects.cpp
  *
@@ -174,7 +174,7 @@ int main(int argc, char** argv) {
 
 ## Enahnced Rotating 3D Shapes C++
 
-```
+```C++
 /*
  *3D Objects.cpp
  *
